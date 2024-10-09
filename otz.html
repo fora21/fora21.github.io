@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>База отдыха ЭХО | Официальный сайт</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!--
+    <div class="input-info">
+ 
+
+        <input type="text" id="logi" name="logi" placeholder="Логин">
+        <i class="fa fa-envelope"></i>
+
+      
+        <input type="email"  id="email" name="email" placeholder="E-mail" required autocomplete="off" validate>
+        <i class="fa fa-lock"></i>
+
+   
+        <input type="password" id="passwor" name="passwor" placeholder="Пароль">
+
+ 
+        <input type="checkbox">
+        <span>Пользовательское соглашение</span><br>
+        
+    </div>
+
+    <div class="log-sign">
+        <button class="login" form="loginform">Зарегистрироваться</button>
+    </div>
+  -->
+  <form action="otz12.php" method="post">
+    <div class="container">
+      <h1>Регистрация</h1>
+      <p>Зарегистрируйтесь чтобы оставить отзыв</p>
+      <label for="username"><b>Логин</b></label>
+      <input
+        type="text"
+        placeholder="Имя"
+        name="logi"
+        id="username"
+        required
+      />
+
+      <label for="avatar"><b>Выберите аватар:</b></label>
+      <input 
+        type="file" 
+        id="avatar" 
+        name="ava" 
+        accept="image/*" required>
+
+      <label for="email"><b>Email</b></label>
+      <input
+        type="text"
+        placeholder="Почта"
+        name="email"
+        id="email"
+        required
+      />
+
+      <label for="pwd"><b>Пароль</b></label>
+      <input
+        type="password"
+        placeholder="Введите свой пароль"
+        name="passwor"
+        id="pwd"
+        required
+      />
+
+
+
+
+
+
+    
+
+
+      <button type="submit">Зарегистрироваться</button>
+    <!-- the # must ideally be replaced by the login page URL -->
+    <div class="footer">
+
+
+
+
+
+
+
+
+      <style>
+      
+        .footer {
+  text-decoration: none;
+  color:#242d44;
+}
+.footer-bt {
+  color:#3ea3f5;
+  font-family: 'Istok Web';
+  font-size: 18px;
+
+}
+      </style>
+      <p>У вас уже есть аккаунт?<a href="otzvoiti.html" class="footer-bt">Войти</a></p>
+    </div>
+   
+  </form>
+</div>
+</body>
+</html>    

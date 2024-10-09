@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"> <!--Кодировка для коректного отображение сайта-->
+	<meta http-equiv="X-A-Compati">
+	<meta name="viewport" content="width=devaice-width, initial-scale=1.0">
+</head>
+<style>
+    form{
+    background-color:#ffffff;
+    width:70%;
+    margin:0 auto;
+    padding:170px;
+    font-family: 'Istok Web';
+    }
+    .futter{
+        font-size: 40px;
+
+    }
+    .com{
+        resize: none;
+    }
+    
+</style>
+<div class="futter">
+  <form action="profile.php" method="post">
+
+    <fieldset>
+        <legend>Оставить отзыв</legend>
+        <div class="">
+            <p><textarea rows="10" cols="75" name="mess" class="com" placeholder="Введите ваше сообщение" required></textarea></p></div>
+
+            <div>
+        <label><input type="textarea" name="logi" placeholder="Введите логин" required></input></label></div>
+         <!--<label><textarea placeholder="Введите ваше сообщение"></textarea><label>-->
+
+    
+                <div class="">
+            <label><input type="date" name="data"><label>
+            </div>
+
+        <label><button type="submit">Отправить</button></label>
+            <label><button type="reset">Очистить</button></label>
+    </fieldset>
+    </div>
+
+    
+  </form>
+</body>
+</html>   
