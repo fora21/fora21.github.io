@@ -1,4 +1,5 @@
-Host: fora21.github.io
+User-agent: *
+Allow: /
 Disallow: /css
 Disallow: /js
 Disallow: /admin/
