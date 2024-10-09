@@ -1,0 +1,5 @@
+Host: 
+Disallow: /css
+Disallow: /js
+Disallow: /admin/
+User-agent: *
