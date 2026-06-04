@@ -1,0 +1,400 @@
+/* Hero Section */
+.hero {
+    height: 800px;
+    position: relative;
+    background: url('../images/hero-bg.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px; /* Добавляем отступы */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.hero-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.hero-card {
+    background: rgba(3, 183, 160, 0.9);
+    color: white;
+    padding: 40px 20px;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    min-height: 200px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.hero-card:hover {
+    transform: translateY(-5px);
+    background: rgba(3, 183, 160, 0.95);
+}
+
+.hero-card i {
+    font-size: 3rem;
+    color: white;
+}
+
+.hero-card span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+/* Hero Cards */
+.hero-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.hero-card {
+    background: rgba(3, 183, 160, 0.9); /* Прозрачность 90% */
+    color: white;
+    padding: 40px 20px; /* Увеличили отступы */
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Добавили выравнивание по центру по вертикали */
+    gap: 20px; /* Увеличили расстояние между иконкой и текстом */
+    min-height: 200px; /* Задаем минимальную высоту для карточек */
+    transition: transform 0.3s ease, background 0.3s ease; /* Добавили плавные переходы */
+}
+
+.hero-card:hover {
+    transform: translateY(-5px); /* Эффект поднятия при наведении */
+    background: rgba(3, 183, 160, 0.95); /* Немного увеличиваем прозрачность при наведении */
+}
+
+.hero-card i {
+    font-size: 3rem; /* Увеличили размер иконок */
+    color: white;
+}
+
+.hero-card span {
+    font-size: 1.2rem; /* Увеличили размер текста */
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+/* About Section */
+.about {
+    padding: 80px 0;
+    background: #EBEBEB;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #03B7A0;
+}
+
+.about-image img {
+    width: 50%;
+    border-radius: 10px;
+}
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.features {
+    margin: 30px 0;
+}
+
+.feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.feature i {
+    color: #03B7A0;
+    font-size: 1.5rem;
+    margin-top: 5px;
+    min-width: 30px;
+}
+
+.feature h4 {
+    color: #03B7A0;
+    margin-bottom: 5px;
+}
+
+.feature p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.btn-rules {
+    background: #03B7A0;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.btn-rules:hover {
+    background: #029882;
+}
+
+.about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 100%; /* Добавляем высоту 100% */
+}
+
+.logo-image {
+    width: 200px;
+    height: auto;
+    opacity: 0.9;
+}
+
+.nature-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 80px 0;
+    background: #FFFFFF;
+}
+
+.gallery h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #03B7A0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Reviews Section */
+.reviews {
+    padding: 80px 0;
+    background: #EBEBEB;
+}
+
+.reviews h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #03B7A0;
+}
+
+.reviews-slider {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.slider-container {
+    display: flex;
+    overflow: hidden;
+}
+
+.review-card {
+    min-width: 100%;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #03B7A0;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.slider-btn.prev {
+    left: -60px;
+}
+
+.slider-btn.next {
+    right: -60px;
+}
+
+/* Services Section */
+.services {
+    padding: 80px 0;
+    background: #FFFFFF;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #03B7A0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.service-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.service-card h3 {
+    padding: 20px 20px 10px;
+    color: #03B7A0;
+}
+
+.service-card p {
+    padding: 0 20px 20px;
+}
+
+.services .btn-more {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: fit-content;
+}
+
+/* CTA Section */
+.cta {
+    padding: 100px 0;
+    position: relative;
+    background: url('../images/cta-bg.jpg') center/cover no-repeat;
+    text-align: center;
+    color: white;
+}
+
+.cta-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.cta h2 {
+    position: relative;
+    z-index: 2;
+    font-size: 2.5rem;
+}
+/* Map Section */
+.map-section {
+    padding: 80px 0;
+    background: #EBEBEB;
+}
+
+.map-section h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #03B7A0;
+}
+
+.map-container {
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.route-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}

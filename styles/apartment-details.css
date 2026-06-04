@@ -1,0 +1,603 @@
+/* Общие стили для страниц деталей апартаментов */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Didact Gothic', sans-serif;
+    background: #FFFFFF;
+    color: #000000;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Кнопка назад */
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #03B7A0;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 20px 0;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.back-button:hover {
+    color: #029882;
+}
+
+/* ВЕРХНИЙ БЛОК */
+.apartment-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.header-left h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    color: #000000;
+}
+
+.address {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+    font-size: 1rem;
+}
+
+.header-center {
+    text-align: center;
+    padding: 0 15px;
+}
+
+.price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.price-note {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Галерея - УПРОЩЕННАЯ ВЕРСИЯ */
+.gallery-container {
+    margin-bottom: 40px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 15px;
+    min-height: 400px;
+    max-height: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f8f9fa;
+}
+
+.main-image-container {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #000;
+}
+
+.main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.thumbnails-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+}
+
+.thumbnail {
+    position: relative;
+    flex: 1;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #000;
+    min-height: 0;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Статичные миниатюры - без клика и анимаций */
+.static-thumb {
+    cursor: default !important;
+    pointer-events: none; /* Отключаем все события мыши */
+}
+
+.static-thumb:hover img {
+    transform: none !important;
+}
+
+/* Только кнопка "+X фото" интерактивная */
+.more-photos {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none !important;
+}
+
+.more-photos:hover {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8));
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.02);
+}
+
+/* Характеристики с иконками */
+.description-section {
+    margin-bottom: 40px;
+}
+
+.characteristics {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.characteristics h2 {
+    color: #000000;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.characteristics-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.characteristics-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #333;
+    font-size: 1.1rem;
+    padding: 8px 0;
+}
+
+.characteristics-list li strong {
+    color: #000000;
+    min-width: 140px;
+}
+
+.characteristics-icon {
+    width: 20px;
+    text-align: center;
+    color: #03B7A0;
+    font-size: 1rem;
+}
+
+.text-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+.text-description p {
+    margin-bottom: 20px;
+}
+
+/* Теги */
+.tags-section {
+    margin-bottom: 40px;
+}
+
+.tag-category {
+    margin-bottom: 25px;
+}
+
+.tag-category h3 {
+    color: #000000;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background: #F8F9FA;
+    color: #007A6E;
+    border: 1px solid #e9ecef;
+}
+
+/* Лайтбокс */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    text-align: center;
+}
+
+.lightbox-image {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.lightbox-counter {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-size: 1.1rem;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 8px 15px;
+    border-radius: 20px;
+    z-index: 1002;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: background 0.3s ease;
+    z-index: 1001;
+}
+
+.lightbox-nav:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+/* Миниатюры в лайтбоксе - ТОЛЬКО ДЛЯ ПК */
+.lightbox-thumbnails {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    max-width: 80%;
+    padding: 10px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.lightbox-thumbnails::-webkit-scrollbar {
+    display: none;
+}
+
+.lightbox-thumb {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    border: 2px solid transparent;
+}
+
+.lightbox-thumb.active {
+    opacity: 1;
+    border-color: #03B7A0;
+}
+
+.lightbox-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Точки для мобильной версии лайтбокса */
+.lightbox-dots {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: row;
+    gap: 10px;
+    z-index: 1002;
+}
+
+.lightbox-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    padding: 0;
+}
+
+.lightbox-dot.active {
+    background: white;
+}
+
+/* МОБИЛЬНАЯ ВЕРСИЯ */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* ВЕРХНИЙ БЛОК НА МОБИЛЬНЫХ */
+    .apartment-header {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+        padding: 15px 0;
+        margin-bottom: 30px;
+    }
+    
+    .header-left {
+        width: 100%;
+        text-align: left;
+    }
+    
+    .header-left h1 {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+    
+    .address {
+        font-size: 0.9rem;
+    }
+    
+    .header-center {
+        text-align: left;
+        padding: 0;
+        width: 100%;
+    }
+    
+    .price {
+        font-size: 1.4rem;
+    }
+    
+    .price-note {
+        font-size: 0.85rem;
+    }
+    
+    /* Галерея на мобильных */
+    .gallery {
+        grid-template-columns: 1fr;
+        height: auto;
+        max-height: none;
+        min-height: auto;
+        gap: 10px;
+    }
+    
+    .thumbnails-container {
+        flex-direction: row;
+        height: 120px;
+    }
+    
+    .main-image-container {
+        height: 250px;
+    }
+    
+    .thumbnail {
+        min-height: 120px;
+    }
+    
+    /* Лайтбокс на мобильных */
+    .lightbox-thumbnails {
+        display: none !important;
+    }
+    
+    .lightbox-dots {
+        display: flex;
+    }
+    
+    .lightbox-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .lightbox-counter {
+        top: 15px;
+        left: 15px;
+        font-size: 1rem;
+        padding: 6px 12px;
+    }
+    
+    .close-lightbox {
+        top: 15px;
+        right: 15px;
+        font-size: 1.5rem;
+        width: 35px;
+        height: 35px;
+    }
+    
+    /* Характеристики на мобильных */
+    .characteristics {
+        padding: 20px;
+    }
+    
+    .characteristics h2 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+    
+    .characteristics-list {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .characteristics-list li {
+        font-size: 1rem;
+        padding: 6px 0;
+    }
+    
+    .characteristics-list li strong {
+        min-width: 120px;
+    }
+    
+    /* Теги на мобильных */
+    .tags {
+        gap: 8px;
+    }
+    
+    .tag {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+    
+    .tag-category h3 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 480px) {
+    .back-button {
+        padding: 15px 0;
+        font-size: 1rem;
+    }
+    
+    .header-left h1 {
+        font-size: 1.3rem;
+    }
+    
+    .address {
+        font-size: 0.85rem;
+    }
+    
+    .price {
+        font-size: 1.3rem;
+    }
+    
+    .gallery {
+        height: auto;
+    }
+    
+    .main-image-container {
+        height: 200px;
+    }
+    
+    .thumbnails-container {
+        height: 100px;
+    }
+    
+    .thumbnail {
+        min-height: 100px;
+    }
+    
+    .characteristics-list li {
+        font-size: 0.95rem;
+    }
+    
+    .characteristics-list li strong {
+        min-width: 110px;
+    }
+    
+    .tags {
+        gap: 6px;
+    }
+    
+    .tag {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+}

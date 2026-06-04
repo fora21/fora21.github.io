@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дом у пляжа - База отдыха "ЭХО"</title>
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/apartment-details.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+</head>
+<body>
+    <div class="container">
+        <a href="apartments.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Назад
+        </a>
+
+        <header class="apartment-header">
+            <div class="header-left">
+                <h1>Дом у пляжа</h1>
+                <div class="address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>ул. Приозёрная, 3А</span>
+                </div>
+            </div>
+            <div class="header-center">
+                <div class="price">от 78 000 ₽</div>
+                <div class="price-note">за сутки</div>
+            </div>
+            
+        </header>
+
+        <section class="gallery-container">
+            <div class="gallery">
+                <div class="main-image-container">
+                    <img src="../images/apartments/beach_house/beach1.jpg" alt="Дом у пляжа" class="main-image">
+                </div>
+                <div class="thumbnails-container">
+                    <div class="thumbnail active">
+                        <img src="../images/apartments/beach_house/beach2.jpg" alt="Терраса">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="../images/apartments/beach_house/beach3.jpg" alt="Гостиная">
+                    </div>
+                    <div class="thumbnail more-photos" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/apartments/beach_house/beach5.jpg')">
+                        <span>+11 фото</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="description-section">
+            <div class="characteristics">
+                <h2>Характеристики</h2>
+                <ul class="characteristics-list">
+                    <li>
+                        <div class="characteristics-icon"><i class="fas fa-vector-square"></i></div>
+                        <strong>Площадь:</strong> 220м²
+                    </li>
+                    <li>
+                        <div class="characteristics-icon"><i class="fas fa-door-open"></i></div>
+                        <strong>Комнаты:</strong> 4 комнаты
+                    </li>
+                    <li>
+                        <div class="characteristics-icon"><i class="fas fa-bed"></i></div>
+                        <strong>Спальные места:</strong> 3 двуспальные кровати, 2 дивана-кровати
+                    </li>
+                </ul>
+            </div>
+            <div class="text-description">
+                <p>Просторный дом с прямым выходом к пляжу. Идеален для большой компании или нескольких семей. Наслаждайтесь звуками прибоя и видом на озеро прямо из окон.</p>
+                <p>Дом имеет два этажа, четыре спальни, две гостиные и две ванные комнаты. Большая терраса с мебелью и мангалом станет центром вечерних посиделок. Всего 50 метров до собственного пляжа.</p>
+                <p>Рядом находится аквапарк, в шаговой доступности магазины, рестораны и т.д. </p>
+            </div>
+        </section>
+
+        <section class="tags-section">
+            <div class="tag-category">
+                <h3>Обеденная зона</h3>
+                <div class="tags">
+                    <span class="tag">Стол на 10 персон</span>
+                    <span class="tag">Кухня-остров</span>
+                    <span class="tag">Посуда</span>
+                    <span class="tag">Барбекю</span>
+                </div>
+            </div>
+            <div class="tag-category">
+                <h3>Основные</h3>
+                <div class="tags">
+                    <span class="tag">Кондиционер</span>
+                    <span class="tag">Интернет</span>
+                    <span class="tag">Телевизор</span>
+                    <span class="tag">Можно с детьми</span>
+                    <span class="tag">Вид на озеро</span>
+                    <span class="tag">Маленький бассейн на территории</span>
+                    <span class="tag">Можно с животными</span>
+                    <span class="tag">Библиотека</span>
+                </div>
+            </div>
+            <div class="tag-category">
+                <h3>В номере</h3>
+                <div class="tags">
+                    <span class="tag">Холодильник</span>
+                    <span class="tag">Кухонная плита</span>
+                    <span class="tag">Посудомоечная машина</span>
+                    <span class="tag">Кофемашина</span>
+                    <span class="tag">Стиральная машина</span>
+                </div>
+            </div>
+            <div class="tag-category">
+                <h3>Ванная комната</h3>
+                <div class="tags">
+                    <span class="tag">Душ</span>
+                    <span class="tag">Ванна</span>
+                    <span class="tag">Фен</span>
+                    <span class="tag">Полотенца</span>
+                    <span class="tag">Халаты</span>
+                    <span class="tag">Одноразовые тапочки</span>
+                    <span class="tag">Джакузи</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="lightbox" class="lightbox">
+        <button class="close-lightbox">&times;</button>
+        <div class="lightbox-content">
+            <img class="lightbox-image" src="" alt="">
+            <div class="lightbox-counter">1/12</div>
+            <div class="lightbox-thumbnails"></div>
+        </div>
+        <button class="lightbox-nav prev">&#10094;</button>
+        <button class="lightbox-nav next">&#10095;</button>
+    </div>
+
+    <script src="../scripts/apartment-details.js"></script>
+</body>
+</html>

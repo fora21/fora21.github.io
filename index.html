@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="yandex-verification" content="64635ae5f7e6539c" />
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>База отдыха "ЭХО" - Алтай</title>
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+    <img src="images/logo.png" alt="База отдыха ЭХО" style="height: 80px;">
+</div>
+            
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="pages/apartments.html" class="nav-link">Апартаменты</a>
+                <a href="pages/entertainment.html" class="nav-link">Развлечения</a>
+            </nav>
+            
+            <div class="header-contacts">
+    <span class="phone">+7 (924) 543 76-23</span>
+    <a href="pages/apartments.html" class="btn-book">Забронировать</a>
+</div>
+            
+            <!-- Добавляем кнопку гамбургера -->
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        
+        <!-- Мобильное меню -->
+        <div class="mobile-menu" id="mobileMenu">
+            <nav class="mobile-nav">
+                <a href="index.html" class="mobile-nav-link">Главная</a>
+                <a href="pages/apartments.html" class="mobile-nav-link">Апартаменты</a>
+                <a href="pages/entertainment.html" class="mobile-nav-link">Развлечения</a>
+                <div class="mobile-contacts">
+    <span class="mobile-phone">+7 (924) 543 76-23</span>
+    <a href="pages/apartments.html" class="mobile-btn-book">Забронировать</a>
+</div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1>База отдыха “ЭХО”</h1>
+                    <p>Устали от работы? Хотите чего-то нового, но не знаете чем заняться. 
+                    В базе отдыха "ЭХО" вы обретёте настоящий отдых! 
+                    Почувствуйте дух природы и окунётесь в интересные развлечения.</p>
+                    <div class="hero-cards">
+                        <div class="hero-card">
+ <i class="fas fa-utensils"></i>
+        <span>Шведский стол</span>
+    </div>
+    <div class="hero-card">
+        <i class="fas fa-hot-tub"></i>
+        <span>Баня</span>
+    </div>
+    <div class="hero-card">
+        <i class="fas fa-home"></i>
+        <span>Лучшие апартаменты</span>
+    </div>
+    <div class="hero-card">
+        <i class="fas fa-hiking"></i>
+        <span>Развлечения на ваш вкус</span>
+    </div>
+</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>О нас</h2>
+                <p>Добро пожаловать в уникальное место отдыха, где сочетаются комфорт и природная красота!</p>
+                
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-tree"></i>
+                        <div>
+                            <h4>Единение с природой</h4>
+                            <p>Расположены в экологически чистом сосновом бору с собственным озером</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-home"></i>
+                        <div>
+                            <h4>Уютные апартаменты</h4>
+                            <p>Комфортабельные номера с современными удобствами и традиционным алтайским гостеприимством</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-utensils"></i>
+                        <div>
+                            <h4>Вкусная кухня</h4>
+                            <p>Шведский стол с местными продуктами и блюдами национальной кухни</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="pages/pravila.html" class="btn-rules">Правила проживания</a>
+            </div>
+            <div class="about-image">
+                 <img src="images/logo.png" alt="Логотип ЭХО" class="logo-image">
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Gallery Section -->
+        <section class="gallery">
+            <div class="container">
+                <h2>Фотографии наших гостей и постояльцев</h2>
+                <div class="gallery-grid" id="galleryGrid">
+                    <!-- Gallery items will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section class="reviews">
+    <div class="container">
+        <h2>Отзывы</h2>
+        <div class="reviews-slider">
+            <div class="slider-container" id="reviewsSlider">
+                <!-- Reviews will be populated by JavaScript -->
+            </div>
+            <button class="slider-btn prev">‹</button>
+            <button class="slider-btn next">›</button>
+            <!-- Добавляем подсказку для мобильных -->
+            <div class="swipe-hint">
+                <i class="fas fa-hand-point-left"></i>
+                <span>Листайте пальцем</span>
+                <i class="fas fa-hand-point-right"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Services Section -->
+        <section class="services">
+            <div class="container">
+                <h2>Наши развлечения и услуги</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <img src="images/services/banya.jpg" alt="Баня/Сауна">
+                        <h3>Баня / Сауна</h3>
+                        <p>Малая, Черная, Купеческая и Сауна: Швейцарская на 15 человек</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="images/services/food.jpg" alt="Питание">
+                        <h3>Питание</h3>
+                        <p>Каждый день повара готовят шведский стол, всё что выберете будет бесплатно. Плата только за вход.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="images/services/camping.jpg" alt="Поход с палатками">
+                        <h3>Поход с палатками</h3>
+                        <p>Вам предоставляется гид который проведет вас по безопасному маршруту, покажет как ставить палатку...</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="images/services/horse.jpg" alt="Конная прогулка">
+                        <h3>Конная прогулка</h3>
+                        <p>Бери седло, надевай шлем и в путь! В любое время когда вам захочется.</p>
+                    </div>
+                </div>
+                <a href="pages/entertainment.html" class="btn-more">Узнать больше</a>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+<section class="map-section">
+    <div class="container">
+        <h2>Как добраться</h2>
+        <div class="map-container">
+           <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2a875f614f6bc56eb47ca3ea6680371175bc3111f529bc55afbc70e11fe2c03f&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+        </div>
+        <div class="route-description">
+            <p>Мы находимся в селе Колывань, Колыванский сельсовет, Курьинский район, Алтайский край. Добраться можно на автомобиле по трассе Р-256 или на нашем трансфере "Эхо" </p>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>О нас</h3>
+                    <p>База отдыха ЭХО - известное место экологического отдыха на Алтае, находится в самом сердце природы.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Услуги</h3>
+                    <p>Для вас домики для проживания, чистый воздух, пляж у озера, кафе, баня, бильярд и многое другое.</p>
+                </div>
+                <div class="footer-column">
+    <h3>Контакты</h3>
+    <div class="contact-item">
+        <i class="fas fa-phone"></i>
+        <span>+7 (4012) 453120</span>
+    </div>
+    <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <span>bazarelaxEXO@gmail.com</span>
+    </div>
+    <div class="contact-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>село Колывань, Колыванский сельсовет, Курьинский район, Алтайский край</span>
+    </div>
+</div>
+                <div class="footer-column">
+                    <h3>Мы в сети</h3>
+                    <p>Присоединяйтесь к нам и получайте свежую информацию, участвуйте в розыгрышах путевок!</p>
+                    <div class="social-links">
+                        <a href="#">VK</a>
+                        <a href="#">Мессенджер</a>
+                        <a href="#">TikTok</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 ООО "База отдыха ЭХО". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/gallery.js"></script>
+    <script src="scripts/slider.js"></script>
+</body>
+</html>

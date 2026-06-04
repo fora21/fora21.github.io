@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Развлечения - База отдыха "ЭХО"</title>
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/entertainment.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="../images/logo.png" alt="База отдыха ЭХО">
+                </div>
+                <nav class="nav">
+                    <a href="../index.html" class="nav-link">Главная</a>
+                    <a href="apartments.html" class="nav-link">Апартаменты</a>
+                    <a href="entertainment.html" class="nav-link">Развлечения</a>
+                </nav>
+                <div class="header-contacts">
+    <span class="phone">+7 (924) 543 76-23</span>
+    <a href="apartments.html" class="btn-book">Забронировать</a>
+</div>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            
+            <!-- Мобильное меню -->
+            <div class="mobile-menu" id="mobileMenu">
+                <nav class="mobile-nav">
+                    <a href="../index.html" class="mobile-nav-link">Главная</a>
+                    <a href="apartments.html" class="mobile-nav-link">Апартаменты</a>
+                    <a href="entertainment.html" class="mobile-nav-link">Развлечения</a>
+                    <div class="mobile-contacts">
+    <span class="mobile-phone">+7 (924) 543 76-23</span>
+    <a href="apartments.html" class="mobile-btn-book">Забронировать</a>
+</div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section - "Дополнительные услуги" -->
+<section class="services-hero">
+    <div class="container">
+        <!-- Выносим заголовок наверх -->
+        <h1 class="services-main-title">Дополнительные услуги и развлечения</h1>
+        
+        <div class="services-content">
+            <div class="services-text">
+                <!-- Убираем отсюда заголовок -->
+                <div class="services-grid">
+                    <div class="service-item">
+                        <i class="fas fa-sun"></i>
+                        <div class="service-info">
+                            <h3>Летом</h3>
+                            <p>велосипед, бильярд, теннис, бадминтон, бассейн, конная прогулка, волейбол, кино под открытым небом.</p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-snowflake"></i>
+                        <div class="service-info">
+                            <h3>Зимой</h3>
+                            <p>лыжи беговые, коньки, ватрушки, и прочее другое для новогоднего настроения!</p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-utensils"></i>
+                        <div class="service-info">
+                            <h3>Шашлык на природе</h3>
+                            <p>беседки - 500 руб/чел; мангал, шампура, уголь и другое есть на базе.</p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-hot-tub"></i>
+                        <div class="service-info">
+                            <h3>Баня и сауна</h3>
+                            <p>до 20:00 - 1 000 руб/час; после 20:00 - 2 500 руб/час; есть банный веник и масло эфирное.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="services-footer">
+                    <p class="footer-text1">База отдыха ЭХО это не только отдых, но и огромная площадка для развлечений</p>
+                    <p class="footer-text2">Выбирайте и заказывайте заранее развлечения на свой вкус</p>
+                </div>
+            </div>
+            <div class="services-slider">
+                <div class="slider-container" id="servicesSlider">
+                    <div class="slide active">
+                        <img src="../images/entertainment/slide1.jpg" alt="Развлечения в ЭХО">
+                    </div>
+                    <div class="slide">
+                        <img src="../images/entertainment/slide2.jpg" alt="Активный отдых">
+                    </div>
+                    <div class="slide">
+                        <img src="../images/entertainment/slide3.jpg" alt="Природа Алтая">
+                    </div>
+                    <div class="slide">
+                        <img src="../images/entertainment/slide4.jpg" alt="Комфортный отдых">
+                    </div>
+                    <div class="slide">
+                        <img src="../images/entertainment/slide5.jpg" alt="Развлечения для детей">
+                    </div>
+                    <div class="slide">
+                        <img src="../images/entertainment/slide6.jpg" alt="Вечерний отдых">
+                    </div>
+                </div>
+                <div class="slider-dots" id="sliderDots">
+                    <!-- dots will be generated by JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Что мы вам предлагаем -->
+<section class="offers">
+    <div class="offers-bg-circles">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+        <div class="circle circle-4"></div>
+        <div class="circle circle-5"></div>
+        <div class="circle circle-6"></div>
+        <div class="circle circle-7"></div>
+        <div class="circle circle-8"></div>
+    </div>
+    <div class="container">
+        <h2>Что мы вам предлагаем</h2>
+        <div class="offers-grid">
+    
+    <!-- 1. Баня / Сауна -->
+    <div class="offer-card">
+        <div class="offer-image">
+            <img src="../images/offers/banya.jpg" alt="Баня и сауна">
+            <div class="offer-badge">Популярное</div>
+        </div>
+        <div class="offer-content">
+            <h3>Баня / Сауна</h3>
+            <div class="offer-features">
+                <div class="feature">
+                    <i class="fas fa-users"></i>
+                    <span>Вместимость: 3-15 человек</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <span>Время: 10:00 - 01:00</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-ruble-sign"></i>
+                    <span>Стоимость: от 1 000 руб/час</span>
+                </div>
+            </div>
+            <div class="offer-details">
+                <h4>Типы бань:</h4>
+                <ul>
+                    <li>Малая (3-5 человек) - 1 000 руб/час</li>
+                    <li>Черная (2-4 человека) - 1 500 руб/час</li>
+                    <li>Купеческая (10 человек) - 2 000 руб/час</li>
+                    <li>Швейцарская сауна (15 человек) - 2 500 руб/час</li>
+                </ul>
+            </div>
+            <div class="offer-note">
+                <p><strong>Внимание:</strong> После 20:00 стоимость всех бань стоит 2 500 руб/час</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Бильярд -->
+    <div class="offer-card">
+        <div class="offer-image">
+            <img src="../images/offers/billiard.jpg" alt="Бильярд">
+            <div class="offer-badge free">Всё включено</div>
+        </div>
+        <div class="offer-content">
+            <h3>Бильярд</h3>
+            <div class="offer-features">
+                <div class="feature">
+                    <i class="fas fa-users"></i>
+                    <span>До 4 человек одновременно</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <span>Время: 9:00 - 23:00</span>
+                </div>
+                
+            </div>
+            <div class="offer-includes">
+                <h4>Включено:</h4>
+                <ul>
+                    <li>Профессиональный бильярдный стол</li>
+                    <li>Кии и шары</li>
+                    <li>Меловой порошок</li>
+                    <li>Счетчик очков</li>
+                </ul>
+            </div>
+            <div class="offer-note">
+                <p><strong>Условия:</strong> Первый час бесплатно, последующие 1 000 руб/час, но при наличии свободных столов - продление бесплатно</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Теннис -->
+    <div class="offer-card">
+        <div class="offer-image">
+            <img src="../images/offers/tennis.jpg" alt="Теннис">
+            <div class="offer-badge">Популярное</div>
+        </div>
+        <div class="offer-content">
+            <h3>Теннис</h3>
+            <div class="offer-features">
+                <div class="feature">
+                    <i class="fas fa-users"></i>
+                    <span>2-6 человек</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <span>Время: 8:00 - 21:00</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-ruble-sign"></i>
+                    <span>Корт: бесплатно</span>
+                </div>
+            </div>
+            <div class="offer-details">
+                <h4>Условия использования:</h4>
+                <ul>
+                    <li>Свои ракетки и мячи - корт бесплатно</li>
+                    <li>Аренда ракетки - 200 руб/час</li>
+                    <li>Мячи - 50 руб/комплект</li>
+                    <li>Тренер - 500 руб/час</li>
+                </ul>
+            </div>
+            <div class="offer-note">
+                <p><strong>Оснащение:</strong> 3 корта с искусственным покрытием, ночное освещение</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Бассейн -->
+    <div class="offer-card">
+        <div class="offer-image">
+            <img src="../images/offers/pool.jpg" alt="Бассейн">
+            <div class="offer-badge free">Всё включено</div>
+        </div>
+        <div class="offer-content">
+            <h3>Бассейн</h3>
+            <div class="offer-features">
+                <div class="feature">
+                    <i class="fas fa-swimmer"></i>
+                    <span>25 метров, 4 дорожки</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <span>Время: 6:00 - 21:00</span>
+                </div>
+                
+            </div>
+            <div class="offer-includes">
+                <h4>Включено:</h4>
+                <ul>
+                    <li>Посещение бассейна</li>
+                    <li>Раздевалки и душевые</li>
+                    <li>Шкафчики для вещей</li>
+                    <li>Инвентарь для плавания</li>
+                    <li>Спасатель на посту</li>
+                </ul>
+            </div>
+            <div class="offer-note">
+                <p><strong>Требования:</strong> Шапочка для плавания. Полотенца - 100 руб</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. Конная прогулка -->
+    <div class="offer-card">
+        <div class="offer-image">
+            <img src="../images/offers/horse.jpg" alt="Конная прогулка">
+            <div class="offer-badge">Для всей семьи</div>
+        </div>
+        <div class="offer-content">
+            <h3>Конная прогулка</h3>
+            <div class="offer-features">
+                <div class="feature">
+                    <i class="fas fa-route"></i>
+                    <span>Маршрут: Сосновый бор + озеро</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <span>Длительность: 1-2 часа</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-ruble-sign"></i>
+                    <span>Стоимость: от 500 руб/чел</span>
+                </div>
+            </div>
+            <div class="offer-details">
+                <h4>Маршруты:</h4>
+                <ul>
+                    <li>Короткий (1 час) - 500 руб/чел</li>
+                    <li>Стандартный (1.5 часа) - 790 руб/чел</li>
+                    <li>Расширенный (2 часа) - 990 руб/чел</li>
+                </ul>
+            </div>
+            <div class="offer-requirements">
+                <h4>Требования:</h4>
+                <ul>
+                    <li>Возраст: от 8 лет</li>
+                    <li>Дети до 12 лет с пешим сопровождением</li>
+                    <li>Удобная одежда и обувь</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. Рыбалка -->
+    <div class="offer-card">
+        <div class="offer-image">
+            <img src="../images/offers/fishing.jpg" alt="Рыбалка">
+            <div class="offer-badge">Популярное</div>
+        </div>
+        <div class="offer-content">
+            <h3>Рыбалка</h3>
+            <div class="offer-features">
+                <div class="feature">
+                    <i class="fas fa-fish"></i>
+                    <span>Виды: щука, окунь, карп</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <span>Время: 5:00 - 22:00</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-ruble-sign"></i>
+                    <span>Стоимость: от 300 руб</span>
+                </div>
+            </div>
+            <div class="offer-details">
+                <h4>Варианты:</h4>
+                <ul>
+                    <li>Береговая рыбалка - 300 руб/день</li>
+                    <li>Аренда лодки - 500 руб/2 часа</li>
+                    <li>Инструктаж для новичков - 400 руб</li>
+                    <li>Снасти - выдаем</li>
+                </ul>
+            </div>
+            <div class="offer-note">
+                <p><strong>Улов:</strong> Пойманную рыбу можно приготовить на мангале или забрать с собой</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 7. Велопрогулки -->
+    <div class="offer-card">
+        <div class="offer-image">
+            <img src="../images/offers/bicycle.jpg" alt="Велопрогулки">
+            <div class="offer-badge">Аренда</div>
+        </div>
+        <div class="offer-content">
+            <h3>Велопрогулки</h3>
+            <div class="offer-features">
+                <div class="feature">
+                    <i class="fas fa-bicycle"></i>
+                    <span>Горные и городские велосипеды</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <span>Время: 8:00 - 20:00</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-ruble-sign"></i>
+                    <span>Стоимость: от 250 руб/час</span>
+                </div>
+            </div>
+            <div class="offer-details">
+                <h4>Маршруты:</h4>
+                <ul>
+                    <li>Легкий (5 км) - вокруг базы</li>
+                    <li>Средний (10 км) - к водопаду</li>
+                    <li>Сложный (15 км) - горный маршрут</li>
+                </ul>
+            </div>
+            <div class="offer-includes">
+                <h4>Включено:</h4>
+                <ul>
+                    <li>Карта маршрутов</li>
+                    <li>Шлем и защита</li>
+                    <li>Ремкомплект</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 8. Волейбол -->
+    <div class="offer-card">
+        <div class="offer-image">
+            <img src="../images/offers/volleyball.jpg" alt="Волейбол">
+            <div class="offer-badge free">Всё включено</div>
+        </div>
+        <div class="offer-content">
+            <h3>Волейбол</h3>
+            <div class="offer-features">
+                <div class="feature">
+                    <i class="fas fa-volleyball-ball"></i>
+                    <span>Пляжный и классический</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <span>Время: 9:00 - 21:00</span>
+                </div>
+                
+            </div>
+            <div class="offer-includes">
+                <h4>Оснащение:</h4>
+                <ul>
+                    <li>2 площадки с песком</li>
+                    <li>Сетка и стойки</li>
+                    <li>Мячи - по требованию</li>
+                    <li>Ночное освещение</li>
+                </ul>
+            </div>
+            <div class="offer-note">
+                <p><strong>Турниры:</strong> Ежемесячные турниры 10-го числа с призами. Регистрация за 1 день</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 9. Бадминтон -->
+    <div class="offer-card">
+        <div class="offer-image">
+            <img src="../images/offers/badminton.jpg" alt="Бадминтон">
+            <div class="offer-badge">Популярное</div>
+        </div>
+        <div class="offer-content">
+            <h3>Бадминтон</h3>
+            <div class="offer-features">
+                <div class="feature">
+                    <i class="fas fa-table-tennis"></i>
+                    <span>2-4 человека</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <span>Время: 9:00 - 20:00</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-ruble-sign"></i>
+                    <span>Корт: бесплатно</span>
+                </div>
+            </div>
+            <div class="offer-details">
+                <h4>Условия:</h4>
+                <ul>
+                    <li>Свои ракетки и воланы - бесплатно</li>
+                    <li>Аренда ракетки - 100 руб/час</li>
+                    <li>Воланы - 50 руб/упаковка</li>
+                    <li>Сетка предоставляется</li>
+                </ul>
+            </div>
+            <div class="offer-note">
+                <p>2 корта на травяном покрытии. Бронирование на ресепшен</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 10. Настольный теннис -->
+    <div class="offer-card">
+        <div class="offer-image">
+            <img src="../images/offers/pingpong.jpg" alt="Настольный теннис">
+            <div class="offer-badge free">Всё включено</div>
+        </div>
+        <div class="offer-content">
+            <h3>Настольный теннис</h3>
+            <div class="offer-features">
+                <div class="feature">
+                    <i class="fas fa-table-tennis"></i>
+                    <span>2-4 человека</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <span>Время: 8:00 - 23:00</span>
+                </div>
+              
+            </div>
+            <div class="offer-includes">
+                <h4>Включено:</h4>
+                <ul>
+                    <li>Профессиональный стол</li>
+                    <li>Ракетки и мячи</li>
+                    <li>Освещение</li>
+                    <li>Счетчик очков</li>
+                </ul>
+            </div>
+            <div class="offer-note">
+                <p>Расположен в закрытом павильоне</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 11. Йога -->
+    <div class="offer-card">
+        <div class="offer-image">
+            <img src="../images/offers/yoga.jpg" alt="Йога">
+            <div class="offer-badge">Гармония</div>
+        </div>
+        <div class="offer-content">
+            <h3>Йога на свежем воздухе</h3>
+            <div class="offer-features">
+                <div class="feature">
+                    <i class="fas fa-spa"></i>
+                    <span>Уровень: для начинающих</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <span>Утренние и вечерние занятия</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-ruble-sign"></i>
+                    <span>Стоимость: 600 руб/занятие</span>
+                </div>
+            </div>
+            <div class="offer-schedule">
+                <h4>Расписание:</h4>
+                <ul>
+                    <li><strong>Утро:</strong> 7:00 - 9:00 (Хатха-йога)</li>
+                    <li><strong>Вечер:</strong> 17:00 - 19:00 (Йога для релаксации)</li>
+                </ul>
+            </div>
+            <div class="offer-includes">
+                <h4>Включено:</h4>
+                <ul>
+                    <li>Коврик для йоги</li>
+                    <li>Плед</li>
+                    <li>Травяной чай после занятия</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 12. Контактный зоопарк -->
+    <div class="offer-card">
+        <div class="offer-image">
+            <img src="../images/offers/zoo.jpg" alt="Контактный зоопарк">
+            <div class="offer-badge">Для всей семьи</div>
+        </div>
+        <div class="offer-content">
+            <h3>Контактный зоопарк</h3>
+            <div class="offer-features">
+                <div class="feature">
+                    <i class="fas fa-paw"></i>
+                    <span>Более 20 видов животных</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <span>Время: 12:00 - 18:00</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-ruble-sign"></i>
+                    <span>Вход: бесплатно</span>
+                </div>
+            </div>
+            <div class="offer-includes">
+                <h4>Животные:</h4>
+                <ul>
+                    <li>Кролики и зайцы</li>
+                    <li>Козы и барашки</li>
+                    <li>Ослы и пони</li>
+                    <li>Птицы и гуси</li>
+                </ul>
+            </div>
+            <div class="offer-note">
+                <p><strong>Кормление:</strong> Специальный корм - 50 руб/пакет. Фотосессии - 200 руб</p>
+            </div>
+        </div>
+    </div>
+
+   
+    <!-- 14. Кино под открытым небом -->
+    <div class="offer-card">
+        <div class="offer-image">
+            <img src="../images/offers/cinema.jpg" alt="Кино под открытым небом">
+            <div class="offer-badge free">Всё включено</div>
+        </div>
+        <div class="offer-content">
+            <h3>Кино под открытым небом</h3>
+            <div class="offer-features">
+                <div class="feature">
+                    <i class="fas fa-film"></i>
+                    <span>Ежедневные показы</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <span>Начало: 21:00</span>
+                </div>
+                
+            </div>
+            <div class="offer-schedule">
+                <h4>Расписание:</h4>
+                <ul>
+                    <li><strong>Пн-Ср:</strong> Комедии и приключения</li>
+                    <li><strong>Чт-Пт:</strong> Драмы и мелодрамы</li>
+                    <li><strong>Сб-Вс:</strong> Семейные фильмы</li>
+                </ul>
+            </div>
+            <div class="offer-includes">
+                <h4>Оснащение:</h4>
+                <ul>
+                    <li>Большой экран 4x3 метра</li>
+                    <li>Удобные кресла-мешки</li>
+                    <li>Пледы (при необходимости)</li>
+                    <li>Попкорн - 100 руб</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 15. Спортивная площадка -->
+    <div class="offer-card">
+        <div class="offer-image">
+            <img src="../images/offers/sportground.jpg" alt="Спортивная площадка">
+            <div class="offer-badge free">Всё включено</div>
+        </div>
+        <div class="offer-content">
+            <h3>Спортивная площадка</h3>
+            <div class="offer-features">
+                <div class="feature">
+                    <i class="fas fa-dumbbell"></i>
+                    <span>Уличные тренажеры</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <span>Время: круглосуточно</span>
+                </div>
+                
+            </div>
+            <div class="offer-includes">
+                <h4>Оборудование:</h4>
+                <ul>
+                    <li>Турники и брусья</li>
+                    <li>Шведская стенка</li>
+                    <li>Кардио-тренажеры</li>
+                    <li>Силовые станции</li>
+                </ul>
+            </div>
+            <div class="offer-note">
+                <p>Подходит для тренировок всех уровней</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 17. Детская игровая комната -->
+    <div class="offer-card">
+        <div class="offer-image">
+            <img src="../images/offers/kidsroom.jpg" alt="Детская игровая комната">
+            <div class="offer-badge free">Всё включено</div>
+        </div>
+        <div class="offer-content">
+            <h3>Детская игровая комната</h3>
+            <div class="offer-features">
+                <div class="feature">
+                    <i class="fas fa-child"></i>
+                    <span>Для детей 3-10 лет</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <span>Время: 9:00 - 17:00</span>
+                </div>
+                
+            </div>
+            <div class="offer-includes">
+                <h4>Оснащение:</h4>
+                <ul>
+                    <li>Игровой лабиринт</li>
+                    <li>Горки</li>
+                    <li>Конструкторы и пазлы</li>
+                    <li>Развивающие игры</li>
+                </ul>
+            </div>
+            <div class="offer-note">
+                <p><strong>Присмотр:</strong> Опытный воспитатель. Родители могут оставить детей под присмотром</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 18. Спа-процедуры -->
+    <div class="offer-card">
+        <div class="offer-image">
+            <img src="../images/offers/spa.jpg" alt="Спа-процедуры">
+            <div class="offer-badge">Релакс</div>
+        </div>
+        <div class="offer-content">
+            <h3>Спа-процедуры</h3>
+            <div class="offer-features">
+                <div class="feature">
+                    <i class="fas fa-spa"></i>
+                    <span>Профессиональные процедуры</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <span>Время: 10:00 - 20:00</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-ruble-sign"></i>
+                    <span>Стоимость: от 1 500 руб</span>
+                </div>
+            </div>
+            <div class="offer-details">
+                <h4>Услуги:</h4>
+                <ul>
+                    <li>Массаж (60 мин) - 1 500 руб</li>
+                    <li>Обертывание (90 мин) - 2 000 руб</li>
+                    <li>Спа-ритуал (120 мин) - 3 500 руб</li>
+                    <li>Уход за лицом (60 мин) - 2 000 руб</li>
+                </ul>
+            </div>
+            <div class="offer-note">
+                <p>Предварительная запись обязательна. Процедуры проводят сертифицированные специалисты</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 19. Поход с палатками -->
+    <div class="offer-card">
+        <div class="offer-image">
+            <img src="../images/offers/camping.jpg" alt="Поход с палатками">
+            <div class="offer-badge">Приключение</div>
+        </div>
+        <div class="offer-content">
+            <h3>Поход с палатками</h3>
+            <div class="offer-features">
+                <div class="feature">
+                    <i class="fas fa-hiking"></i>
+                    <span>С гидом-инструктором</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <span>Длительность: 1-3 дня</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-ruble-sign"></i>
+                    <span>Стоимость: от 1 000 руб/чел</span>
+                </div>
+            </div>
+            <div class="offer-details">
+                <h4>Маршруты:</h4>
+                <ul>
+                    <li>Однодневный (8 часов) - 1 000 руб</li>
+                    <li>С ночевкой (24 часа) - 2 000 руб</li>
+                    <li>Экстрим (3 дня) - 3 500 руб</li>
+                </ul>
+            </div>
+            <div class="offer-includes">
+                <h4>Включено:</h4>
+                <ul>
+                    <li>Палатка и спальник</li>
+                    <li>Питание в походе</li>
+                    <li>Инструктаж по выживанию</li>
+                    <li>Медицинская страховка</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 20. Экскурсии по Алтаю -->
+    <div class="offer-card">
+        <div class="offer-image">
+            <img src="../images/offers/excursion.jpg" alt="Экскурсии по Алтаю">
+            <div class="offer-badge">Лучшие маршруты</div>
+        </div>
+        <div class="offer-content">
+            <h3>Экскурсии по Алтаю</h3>
+            <div class="offer-features">
+                <div class="feature">
+                    <i class="fas fa-mountain"></i>
+                    <span>Пешие и автомобильные</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <span>Длительность: 2-8 часов</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-ruble-sign"></i>
+                    <span>Стоимость: от 4 500 руб</span>
+                </div>
+            </div>
+            <div class="offer-details">
+                <h4>Маршруты:</h4>
+                <ul>
+                    <li>К озеру Ая (3 часа) - 4 500 руб</li>
+                    <li>Водопад Шинок (5 часов) - 5 500 руб</li>
+                    <li>Гора Церковка (6 часов) - 7 000 руб</li>
+                    <li>Денисова пещера (8 часов) - 9 000 руб</li>
+                </ul>
+            </div>
+            <div class="offer-note">
+                <p><strong>В стоимость входит:</strong> транспорт, услуги гида, обед. Минимальная группа - 4 человека</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+</section>
+
+        <!-- Акции и скидки -->
+<section class="promotions">
+    <div class="promotions-bg">
+        <div class="promotions-overlay"></div>
+    </div>
+    <div class="container">
+        <h2>Акции и скидки</h2>
+        <div class="promotions-slider-container">
+            <div class="promotions-slider" id="promotionsSlider">
+                <!-- Акция 1 -->
+                <div class="promotion-slide">
+                    <div class="promotion-card">
+                        <div class="promotion-image">
+                            <img src="../images/promotions/wedding.jpg" alt="Свадьба у нас">
+                            <div class="promotion-badge">-30%</div>
+                        </div>
+                        <div class="promotion-content">
+                            <h3>Свадьба у нас!</h3>
+                            <p>В такой знаменательный день для молодоженов, наша база отдыха предлагает 30% скидку при бронировании домиков в день проведения торжества!</p>
+                            <div class="promotion-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-gift"></i>
+                                    <span>Подарок для молодоженов</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-glass-cheers"></i>
+                                    <span>Бесплатное украшение зала</span>
+                                </div>
+                            </div>
+                            <button class="btn-details" onclick="openPromotion(1)">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Акция 2 -->
+                <div class="promotion-slide">
+                    <div class="promotion-card">
+                        <div class="promotion-image">
+                            <img src="../images/promotions/birthday.jpg" alt="День рождения">
+                            <div class="promotion-badge">-20%</div>
+                        </div>
+                        <div class="promotion-content">
+                            <h3>День рождения</h3>
+                            <p>За неделю до дня рождения имениннику предоставляется скидка в размере 20%!</p>
+                            <div class="promotion-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-birthday-cake"></i>
+                                    <span>Торт в подарок</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>Действует 7 дней</span>
+                                </div>
+                            </div>
+                            <button class="btn-details" onclick="openPromotion(2)">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Акция 3 -->
+                <div class="promotion-slide">
+                    <div class="promotion-card">
+                        <div class="promotion-image">
+                            <img src="../images/promotions/weekend.jpg" alt="Путевка выходного дня">
+                            <div class="promotion-badge">-33%</div>
+                        </div>
+                        <div class="promotion-content">
+                            <h3>Путевка выходного дня</h3>
+                            <p>Путевка на двое суток на двоих от 8 000. Посещение спа, завтрак, обед и ужин - всё включено!</p>
+                            <div class="promotion-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-spa"></i>
+                                    <span>SPA включено</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-utensils"></i>
+                                    <span>Питание включено</span>
+                                </div>
+                            </div>
+                            <button class="btn-details" onclick="openPromotion(3)">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Акция 4 -->
+                <div class="promotion-slide">
+                    <div class="promotion-card">
+                        <div class="promotion-image">
+                            <img src="../images/promotions/early-booking.jpg" alt="Раннее бронирование">
+                            <div class="promotion-badge">-15%</div>
+                        </div>
+                        <div class="promotion-content">
+                            <h3>Раннее бронирование</h3>
+                            <p>Забронируйте отдых за 3 месяца до заезда и получите скидку 15% на проживание и 5% на все развлечения!</p>
+                            <div class="promotion-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-calendar-check"></i>
+                                    <span>За 3 месяца до заезда</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-tags"></i>
+                                    <span>+5% на развлечения</span>
+                                </div>
+                            </div>
+                            <button class="btn-details" onclick="openPromotion(4)">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Акция 5 -->
+                <div class="promotion-slide">
+                    <div class="promotion-card">
+                        <div class="promotion-image">
+                            <img src="../images/promotions/corporate.jpg" alt="Корпоративный отдых">
+                            <div class="promotion-badge">Подарок</div>
+                        </div>
+                        <div class="promotion-content">
+                            <h3>Корпоративный отдых</h3>
+                            <p>При заказе корпоративного мероприятия для группы от 10 человек - организация тимбилдинга в подарок!</p>
+                            <div class="promotion-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>От 10 человек</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-trophy"></i>
+                                    <span>Тимбилдинг в подарок</span>
+                                </div>
+                            </div>
+                            <button class="btn-details" onclick="openPromotion(5)">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Навигационные кнопки -->
+            <button class="slider-nav prev" id="promotionsPrev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-nav next" id="promotionsNext">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <!-- Индикаторы -->
+            <div class="slider-indicators" id="promotionsIndicators">
+                <!-- Индикаторы будут добавлены через JS -->
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+ <div class="section-divider"></div>
+<!-- Блок "Правила проживания" -->
+<section class="rules-cta">
+    <div class="container">
+        <div class="rules-content">
+            <h2>Правила проживания и нахождения на территории</h2>
+            <p>Для обеспечения комфортного и безопасного отдыха всех гостей, просим вас ознакомиться с правилами проживания и поведения на территории базы отдыха "ЭХО".</p>
+            
+            <a href="pravila.html" class="btn-rules-full">
+                <i class="fas fa-file-alt"></i>
+                Ознакомиться с правилами
+            </a>
+        </div>
+    </div>
+</section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>О нас</h3>
+                    <p>База отдыха ЭХО - известное место экологического отдыха на Алтае, находится в самом сердце природы.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Услуги</h3>
+                    <p>Для вас домики для проживания, чистый воздух, пляж на заливе, кафе, баня, бильярд и многое другое.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (4012) 453120</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>bazarelaxEXO@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>село Колывань, Колыванский сельсовет, Курьинский район, Алтайский край</span>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Мы в сети</h3>
+                    <p>Присоединяйтесь к нам и получайте свежую информацию, участвуйте в розыгрышах путевок!</p>
+                    <div class="social-links">
+                        <a href="#">VK</a>
+                        <a href="#">Мессенджер</a>
+                        <a href="#">TikTok</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 ООО "База отдыха ЭХО". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для акций -->
+    <div class="modal" id="promotionModal">
+        <div class="modal-content">
+            <span class="close" onclick="closePromotion()">&times;</span>
+            <div id="modalContent">
+                <!-- Контент будет заполняться JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/entertainment.js"></script>
+</body>
+</html>

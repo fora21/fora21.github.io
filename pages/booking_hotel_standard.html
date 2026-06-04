@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронирование Гостиница Стандарт - База отдыха "ЭХО"</title>
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/booking.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+</head>
+<body>
+    <div class="container">
+        <!-- Кнопка назад -->
+        <a href="../pages/apartments.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Назад
+        </a>
+
+        <!-- Верхний информационный блок -->
+        <div class="apartment-header">
+            <h1 class="apartment-title">Гостиница Стандарт</h1>
+            <div class="apartment-address">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>ул. Молодежная, 22</span>
+            </div>
+        </div>
+
+        <div class="booking-container">
+            <!-- Левая колонка - КАРТИНКА И ИНФОРМАЦИЯ -->
+            <div class="left-column">
+                <!-- Изображение апартамента -->
+                <div class="apartment-image">
+                    <img src="../images/apartments/hotel_standard/hotel1.jpg" alt="Гостиница Стандарт">
+                </div>
+
+                <!-- Информационный блок -->
+                <div class="booking-info">
+                    <h3>Информация о бронировании</h3>
+                    <p>Ваши данные надежно защищены и используются только для обработки бронирования. После отправки формы с вами свяжется наш менеджер для подтверждения бронирования и оформления предоплаты.</p>
+                    
+                    <h3>Принимаем к оплате:</h3>
+                    <div class="payment-systems">
+                        <div class="payment-system">
+                            <span class="payment-icon">Мир</span>
+                        </div>
+                        <div class="payment-system">
+                            <span class="payment-icon">Сбер</span>
+                        </div>
+                        <div class="payment-system">
+                            <span class="payment-icon">СПБ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Правая колонка - ФОРМА БРОНИРОВАНИЯ -->
+            <div class="right-column">
+                <form class="booking-form" id="bookingForm" action="https://formspree.io/f/mrbnbeea" method="POST">
+                    <h2>Бронирование</h2>
+
+                    <!-- Предзаполненные данные -->
+                    <div class="form-group">
+                        <label>Даты бронирования</label>
+                        <div class="form-row">
+                            <div class="input-with-icon">
+                                <i class="fas fa-calendar"></i>
+                                <input type="date" id="checkin" name="checkin" class="form-input" readonly>
+                            </div>
+                            <div class="input-with-icon">
+                                <i class="fas fa-calendar"></i>
+                                <input type="date" id="checkout" name="checkout" class="form-input" readonly>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Время заезда/выезда</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-clock"></i>
+                            <input type="text" class="form-input" value="Заезд с 12:00 до 23:00, выезд с 00:00 до 10:00" readonly>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Количество гостей</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-users"></i>
+                            <input type="text" id="guests" name="guests" class="form-input" readonly>
+                        </div>
+                    </div>
+
+                    <!-- Поля для заполнения -->
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div>
+                                <label for="firstName">Имя *</label>
+                                <input type="text" id="firstName" name="firstName" class="form-input" required placeholder="Введите ваше имя">
+                                <div class="error-message" id="firstNameError"></div>
+                            </div>
+                            <div>
+                                <label for="lastName">Фамилия *</label>
+                                <input type="text" id="lastName" name="lastName" class="form-input" required placeholder="Введите вашу фамилию">
+                                <div class="error-message" id="lastNameError"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div>
+                                <label for="phone">Телефон *</label>
+                                <input type="tel" id="phone" name="phone" class="form-input" required placeholder="+7 (XXX) XXX-XX-XX">
+                                <div class="error-message" id="phoneError"></div>
+                            </div>
+                            <div>
+                                <label for="additionalPhone">Дополнительный телефон</label>
+                                <input type="tel" id="additionalPhone" name="additionalPhone" class="form-input" placeholder="+7 (XXX) XXX-XX-XX">
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" class="form-input" required placeholder="your@email.com">
+                        <div class="error-message" id="emailError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Пожелания</label>
+                        <textarea id="notes" name="notes" class="form-input" placeholder="Дополнительные пожелания к бронированию..."></textarea>
+                    </div>
+
+                    <!-- Предупреждение -->
+                    <div class="booking-warning">
+                        <strong>Важно:</strong> На стойке регистрации по приезду нужно будет предоставить паспорт и будьте готовы сообщить ФИО и личный номер.
+                    </div>
+
+                    <!-- Расчет стоимости -->
+                    <div class="calculation-section">
+                        <h3>Расчет стоимости</h3>
+                        <div class="calculation-row" id="calculationRow">
+                             <span id="calculationText">0 суток × 8 000 ₽</span>
+                             <span id="totalCost">0 ₽</span>
+                         </div>
+                        <div class="calculation-row advance">
+                            <span>Предоплата (12%)</span>
+                            <span id="advancePayment">0 ₽</span>
+                        </div>
+                        <div class="calculation-row final">
+                            <span>Оплата при заезде</span>
+                            <span id="finalPayment">0 ₽</span>
+                        </div>
+                    </div>
+
+                    <!-- СКРЫТЫЕ ПОЛЯ ДЛЯ АВТОМАТИЧЕСКИХ РАСЧЕТОВ -->
+                    <input type="hidden" name="apartment_type" value="Гостиница Стандарт">
+                    <input type="hidden" name="apartment_price" value="15000">
+                    <input type="hidden" name="total_cost" id="total_cost" value="0">
+                    <input type="hidden" name="advance_payment" id="advance_payment" value="0">
+                    <input type="hidden" name="final_payment" id="final_payment" value="0">
+
+                    <!-- Кнопка отправки -->
+                    <button type="submit" class="submit-button">
+                        Забронировать
+                    </button>
+
+                    <!-- Сообщение об успешной отправке -->
+                    <div class="success-message" id="successMessage">
+                        ✅ Данные отправлены успешно! Мы свяжемся с вами в ближайшее время для подтверждения бронирования.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../scripts/booking.js"></script>
+</body>
+</html>

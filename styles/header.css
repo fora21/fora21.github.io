@@ -1,0 +1,152 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #FFFFFF;
+    z-index: 1000;
+    transition: background 0.3s ease;
+}
+
+.header.scrolled {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #000000;
+    padding: 8px 16px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    border: 2px solid #03B7A0;
+}
+
+.header-contacts {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.phone {
+    font-weight: bold;
+}
+
+/* Гамбургер меню */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    gap: 4px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #000000;
+    transition: 0.3s;
+}
+
+/* Мобильное меню */
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 20px 0;
+}
+
+.mobile-menu.active {
+    display: block;
+}
+
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.mobile-nav-link {
+    text-decoration: none;
+    color: #000000;
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.mobile-nav-link:hover {
+    border-left-color: #03B7A0;
+    background: #f8f8f8;
+}
+
+.mobile-contacts {
+    padding: 20px;
+    border-top: 1px solid #EBEBEB;
+    margin-top: 10px;
+}
+
+.mobile-phone {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.mobile-btn-book {
+    width: 100%;
+    border: 2px solid #000000;
+    border-radius: 15px;
+    background: transparent;
+    color: #000000;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    text-decoration: none; /* УБИРАЕМ ПОДЧЕРКИВАНИЕ */
+    display: block; /* Делаем блочным элементом для корректного отображения */
+    text-align: center; /* Центрируем текст */
+}
+
+.mobile-btn-book:hover {
+    background: #000000;
+    color: #FFFFFF;
+    text-decoration: none; /* Убеждаемся, что при наведении тоже нет подчеркивания */
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .nav, .header-contacts {
+        display: none;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .header-content {
+        padding: 10px 0;
+    }
+}

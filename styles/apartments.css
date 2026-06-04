@@ -1,0 +1,514 @@
+/* Apartments Filter Section */
+.apartments-filter {
+    background: #03B7A0;
+    padding: 40px 0;
+    margin-top: 80px;
+    color: white;
+}
+
+.filter-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    align-items: end;
+}
+
+.filter-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-item label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.date-input {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    background: white;
+}
+
+.date-input:focus {
+    outline: 2px solid rgba(255,255,255,0.5);
+}
+
+/* Guests Dropdown */
+.guests-dropdown {
+    position: relative;
+}
+
+.guests-display {
+    padding: 12px 15px;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #000;
+    position: relative;
+}
+
+.guests-display::after {
+    content: '▼';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.guests-selector {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 100;
+    margin-top: 5px;
+    padding: 15px;
+}
+
+.guests-dropdown.active .guests-selector {
+    display: block;
+}
+
+.guest-category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.guest-category:last-child {
+    margin-bottom: 0;
+}
+
+.guest-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.guest-btn {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #03B7A0;
+    background: white;
+    color: #03B7A0;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.guest-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.guest-count {
+    min-width: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.btn-show {
+    background: white;
+    color: #03B7A0;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Apartments List */
+.apartments-list {
+    padding: 60px 0;
+    background: white;
+}
+
+.apartments-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Apartment Card - Three Columns Layout */
+.apartment-card {
+    display: grid;
+    grid-template-columns: 40% 40% 20%;
+    gap: 0;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    /* УБИРАЕМ фиксированную высоту - теперь карточка будет адаптивной */
+}
+
+/* Apartment Slider - КАРДИНАЛЬНЫЕ ИЗМЕНЕНИЯ */
+.apartment-slider {
+    position: relative;
+    /* УБИРАЕМ фиксированную высоту */
+    overflow: hidden;
+    border-right: 1px solid #f0f0f0;
+    background: #f8f9fa;
+}
+
+.slider-track {
+    display: flex;
+    height: 100%; /* 100% от родителя */
+    transition: transform 0.5s ease;
+}
+
+.slider-slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex; /* Используем flex для выравнивания */
+    align-items: center; /* Центрируем по вертикали */
+    justify-content: center; /* Центрируем по горизонтали */
+}
+
+/* ИСПРАВЛЕНИЕ: Убираем белые полосы ПУТЕМ СОХРАНЕНИЯ ПРОПОРЦИЙ */
+.slider-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Заполняет контейнер без искажений */
+    display: block;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 15px; /* Немного выше */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.slider-dot {
+    width: 8px; /* Меньше точки */
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.slider-dot.active {
+    background: white;
+}
+
+/* Apartment Info - Middle Column */
+.apartment-info {
+    padding: 25px; /* Уменьшили отступы */
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #f0f0f0;
+}
+
+.apartment-header {
+    margin-bottom: 20px; /* Уменьшили отступ */
+}
+
+.apartment-title {
+    color: #000000;
+    font-size: 1.4rem; /* Уменьшили шрифт */
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.apartment-address {
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px; /* Уменьшили отступ */
+    font-size: 0.9rem; /* Уменьшили шрифт */
+}
+
+.apartment-features {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Уменьшили gap */
+    margin-bottom: 20px; /* Уменьшили отступ */
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+    font-size: 0.9rem; /* Уменьшили шрифт */
+}
+
+.feature i {
+    color: #03B7A0;
+    width: 16px; /* Уменьшили ширину */
+    text-align: center;
+    font-size: 0.9rem; /* Уменьшили иконки */
+}
+
+/* Tags Container */
+.apartment-tags-container {
+    margin-bottom: 20px; /* Уменьшили отступ */
+}
+
+.tags-title {
+    color: #007A6E;
+    font-size: 1rem; /* Уменьшили шрифт */
+    margin-bottom: 12px; /* Уменьшили отступ */
+    font-weight: bold;
+}
+
+.apartment-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px; /* Уменьшили gap */
+}
+
+.tag {
+    background: #f8f9fa;
+    color: #007A6E;
+    padding: 4px 10px; /* Уменьшили отступы */
+    border-radius: 12px;
+    font-size: 0.8rem; /* Уменьшили шрифт */
+    border: 1px solid #e9ecef;
+}
+
+/* Details Link */
+.apartment-details-link {
+    margin-top: auto;
+}
+
+.btn-details {
+    color: #03B7A0;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem; /* Уменьшили шрифт */
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px; /* Уменьшили gap */
+}
+
+.btn-details:hover {
+    color: #029882;
+}
+
+/* Apartment Booking - Right Column */
+.apartment-booking-side {
+    padding: 25px 20px; /* Уменьшили отступы */
+    display: flex;
+    flex-direction: column;
+    background: #fafafa;
+}
+
+.booking-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.apartment-price {
+    margin-bottom: 20px; /* Уменьшили отступ */
+}
+
+.price-main {
+    font-size: 1.5rem; /* Уменьшили шрифт */
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.price-note {
+    font-size: 0.85rem; /* Уменьшили шрифт */
+    color: #666;
+}
+
+.btn-book-apartment {
+    background: #03B7A0;
+    color: white;
+    border: none;
+    padding: 12px 20px; /* Уменьшили отступы */
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 0.9rem; /* Уменьшили шрифт */
+    display: flex;
+    align-items: center;
+    gap: 6px; /* Уменьшили gap */
+    width: 100%;
+    justify-content: center;
+}
+
+.btn-book-apartment:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Unavailable State */
+.apartment-card.unavailable {
+    opacity: 0.7;
+    position: relative;
+}
+
+.apartment-card.unavailable::before {
+    content: 'ЗАБРОНИРОВАНО';
+    position: absolute;
+    top: 15px; /* Подвинули выше */
+    left: 15px; /* Подвинули левее */
+    background: #FF6B6B;
+    color: white;
+    padding: 6px 12px; /* Уменьшили отступы */
+    border-radius: 15px;
+    font-size: 0.7rem; /* Уменьшили шрифт */
+    font-weight: bold;
+    z-index: 10;
+}
+
+.apartment-card.unavailable .btn-book-apartment {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .apartment-card {
+        grid-template-columns: 45% 35% 20%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .filter-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .apartment-card {
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+            "slider info"
+            "booking booking";
+    }
+    
+    .apartment-slider {
+        grid-area: slider;
+        border-right: 1px solid #f0f0f0;
+        border-bottom: none;
+        /* Добавляем фиксированную высоту для мобильных */
+        height: 250px;
+    }
+    
+    .apartment-info {
+        grid-area: info;
+        border-right: none;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .apartment-booking-side {
+        grid-area: booking;
+        border-top: 1px solid #f0f0f0;
+    }
+}
+
+@media (max-width: 768px) {
+    .apartments-filter {
+        margin-top: 60px;
+        padding: 30px 0;
+    }
+    
+    .filter-content {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .apartment-card {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "slider"
+            "info"
+            "booking";
+    }
+    
+    .apartment-slider {
+        height: 220px; /* Меньшая высота для мобильных */
+        border-right: none;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .apartment-info {
+        padding: 20px 15px;
+        border-right: none;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .apartment-booking-side {
+        padding: 20px 15px;
+    }
+    
+    .apartment-title {
+        font-size: 1.3rem;
+    }
+    
+    .price-main {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .apartments-list {
+        padding: 40px 0;
+    }
+    
+    .apartment-slider {
+        height: 200px; /* Еще меньше для очень маленьких экранов */
+    }
+    
+    .apartment-info {
+        padding: 15px 12px;
+    }
+    
+    .apartment-booking-side {
+        padding: 15px 12px;
+    }
+    
+    .apartment-title {
+        font-size: 1.2rem;
+    }
+    
+    .apartment-tags {
+        gap: 4px;
+    }
+    
+    .tag {
+        font-size: 0.75rem;
+        padding: 3px 8px;
+    }
+    
+    .price-main {
+        font-size: 1.3rem;
+    }
+    
+    .btn-book-apartment {
+        padding: 10px 15px;
+        font-size: 0.85rem;
+    }
+}
