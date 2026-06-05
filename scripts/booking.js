@@ -146,16 +146,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (apartment.type === 'per_person') {
             totalCost = nights * apartment.price * guests;
-            calculationText = `${nights} сут × ${guests} чел × ${apartment.price}₽ = ${formatPrice(totalCost)}`;
+            calculationText = `${nights} сут × ${guests} чел × ${apartment.price} ₽`;
         } 
         else if (apartment.type === 'per_room_2pax') {
             const rooms = Math.ceil(guests / 2);
             totalCost = nights * apartment.price * rooms;
-            calculationText = `${rooms} номер(а) × ${apartment.price}₽ × ${nights} сут = ${formatPrice(totalCost)} (${guests} гостей, по 2 в номере)`;
+            calculationText = `${rooms} номер(а) × ${apartment.price} ₽ × ${nights} сут`;
         } 
         else {
             totalCost = nights * apartment.price;
-            calculationText = `${nights} сут × ${apartment.price}₽ = ${formatPrice(totalCost)}`;
+            calculationText = `${nights} сут × ${apartment.price} ₽`;
         }
 
         const advancePayment = Math.round(totalCost * 0.12);
@@ -166,20 +166,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function updateDisplay(nights, totalCost, advancePayment, finalPayment, calculationText) {
-        const nightsElement = document.getElementById('totalNights');
+        // Обновляем текст расчёта — ищем по id, иначе берём первый спан в строке
+        const calcTextEl = document.getElementById('calculationText') ||
+                           document.querySelector('#calculationRow span:first-child') ||
+                           document.querySelector('.calculation-row span:first-child');
+        if (calcTextEl && calculationText) calcTextEl.textContent = calculationText;
+
+        // Обновляем итоговую сумму (правый спан)
         const totalCostElement = document.getElementById('totalCost');
+        if (totalCostElement) totalCostElement.textContent = formatPrice(totalCost);
+
+        // Предоплата и оплата при заезде
         const advanceElement = document.getElementById('advancePayment');
         const finalElement = document.getElementById('finalPayment');
-        
-        if (nightsElement) nightsElement.textContent = nights;
-        if (totalCostElement) totalCostElement.textContent = formatPrice(totalCost);
         if (advanceElement) advanceElement.textContent = formatPrice(advancePayment);
         if (finalElement) finalElement.textContent = formatPrice(finalPayment);
-
-        const calculationRow = document.querySelector('.calculation-row:first-child');
-        if (calculationRow && calculationText) {
-            calculationRow.innerHTML = `<span>${calculationText}</span><span>${formatPrice(totalCost)}</span>`;
-        }
     }
 
     function updateHiddenFields(totalCost, advancePayment, finalPayment) {
