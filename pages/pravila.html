@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../styles/pravila.css">
 </head>
 <body>
-    <!-- Header (как на всех страницах) -->
+    <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header-content">
@@ -56,7 +56,7 @@
                 <p>Уважаемые Гости, мы высоко ценим безопасность и комфорт вашего отдыха, поэтому на территории нашей базы отдыха действуют следующие правила:</p>
             </div>
 
-            <!-- Раздел 1: Общие правила поведения -->
+           
             <section class="pravila-section">
                 <h2>Общие правила поведения</h2>
                 <ul class="pravila-list">
@@ -72,7 +72,7 @@
                 </ul>
             </section>
 
-            <!-- Раздел 2: Документы для заселения (с иконкой) -->
+            
             <section class="pravila-section">
                 <h2><i class="fas fa-passport"></i> Документы для заселения</h2>
                 <ul class="pravila-list">
@@ -80,7 +80,7 @@
                 </ul>
             </section>
 
-            <!-- Раздел 3: Расчетные часы -->
+           
             <section class="pravila-section">
                 <h2>Расчетные часы</h2>
                 <ul class="pravila-list">
@@ -89,7 +89,7 @@
                 </ul>
             </section>
 
-            <!-- Раздел 4: Основные пункты -->
+          
             <section class="pravila-section">
                 <h2>Основные правила</h2>
                 <ul class="pravila-list">
@@ -109,7 +109,6 @@
                 </ul>
             </section>
 
-            <!-- Раздел 5: Правила проживания с собаками (иконка) -->
             <section class="pravila-section">
                 <h2><i class="fas fa-dog"></i> Правила проживания с собаками</h2>
                 <ul class="pravila-list">
@@ -125,7 +124,7 @@
                 </ul>
             </section>
 
-            <!-- Раздел 6: Строго запрещено (иконка) -->
+          
             <section class="pravila-section">
                 <h2><i class="fas fa-ban"></i> Строго запрещено</h2>
                 <ul class="pravila-list">
@@ -152,9 +151,9 @@
                 </ul>
             </section>
 
-            <!-- Раздел 7: Ответственность и прочее (иконка) -->
+         
             <section class="pravila-section">
-                <h2><i class="fas fa-shield-alt"></i> Ответственность и прочее</h2>
+                <h2><i class="fas fa-shield-alt"></i> Ответственность и безопасность</h2>
                 <ul class="pravila-list">
                     <li>Администрация не отвечает за сохранность авто, багажа, личных вещей, медицинские расходы, кражи, несчастные случаи по вине отдыхающего.</li>
                     <li>При нарушении – штраф или выселение без компенсации.</li>
@@ -217,13 +216,13 @@
             main.style.paddingTop = headerHeight + 'px';
         }
     }
-    // Вызываем при загрузке и при изменении размера окна
+
     window.addEventListener('load', adjustHeaderOffset);
     window.addEventListener('resize', adjustHeaderOffset);
 </script>
     <script src="../scripts/main.js"></script>
     <script>
-        // Для кнопки бронирования в шапке
+        
         document.querySelectorAll('.btn-book, .mobile-btn-book').forEach(btn => {
             btn.addEventListener('click', () => {
                 window.location.href = 'apartments.html';
@@ -232,14 +231,14 @@
     </script>
     <script src="../scripts/main.js"></script>
 <script>
-    // Для кнопки бронирования в шапке
+    
     document.querySelectorAll('.btn-book, .mobile-btn-book').forEach(btn => {
         btn.addEventListener('click', () => {
             window.location.href = 'apartments.html';
         });
     });
     
-    // Автоматическая регулировка отступа под высоту шапки
+    
     function adjustHeaderOffset() {
         const header = document.querySelector('.header');
         const main = document.querySelector('main');

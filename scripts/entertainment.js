@@ -10,10 +10,10 @@ function initServicesSlider() {
     const dotsContainer = document.getElementById('sliderDots');
     const sliderContainer = document.querySelector('.slider-container');
     
-    // Очищаем контейнер точек перед созданием новых
+
     dotsContainer.innerHTML = '';
     
-    // Create dots
+  
     slides.forEach((_, index) => {
         const dot = document.createElement('div');
         dot.className = `dot ${index === 0 ? 'active' : ''}`;
@@ -21,13 +21,13 @@ function initServicesSlider() {
         dotsContainer.appendChild(dot);
     });
     
-    // Добавляем обработчики для свайпа
+
     addSwipeSupport(sliderContainer);
     
-    // Start auto slide
+  
     startAutoSlide();
     
-    // Pause on hover
+  
     if (sliderContainer) {
         sliderContainer.addEventListener('mouseenter', stopAutoSlide);
         sliderContainer.addEventListener('mouseleave', startAutoSlide);
@@ -108,7 +108,7 @@ function stopAutoSlide() {
     }
 }
 
-// Promotions Modal
+// Акции
 function openPromotion(promoId) {
     const modal = document.getElementById('promotionModal');
     const modalContent = document.getElementById('modalContent');
@@ -209,7 +209,7 @@ window.addEventListener('click', function(event) {
     }
 });
 
-// Promotions Horizontal Slider
+
 let currentPromotionSlide = 0;
 let promotionSlideInterval;
 
@@ -221,12 +221,12 @@ function initPromotionsSlider() {
     const slides = document.querySelectorAll('.promotion-slide');
     const slidesCount = slides.length;
     
-    // Добавляем переменные для свайпа
+   
     let promoTouchStartX = 0;
     let promoTouchEndX = 0;
     const PROMO_SWIPE_THRESHOLD = 50;
 
-    // Create indicators
+   
     indicatorsContainer.innerHTML = '';
     for (let i = 0; i < slidesCount; i++) {
         const indicator = document.createElement('div');
@@ -235,7 +235,7 @@ function initPromotionsSlider() {
         indicatorsContainer.appendChild(indicator);
     }
 
-    // Добавляем обработчики для свайпа на слайдер акций
+
     function handlePromoTouchStart(e) {
         promoTouchStartX = e.touches[0].clientX;
     }
@@ -265,16 +265,15 @@ function initPromotionsSlider() {
         promoTouchStartX = 0;
         promoTouchEndX = 0;
     }
-    
-    // Добавляем обработчики свайпа
+
     slider.addEventListener('touchstart', handlePromoTouchStart, { passive: true });
     slider.addEventListener('touchmove', handlePromoTouchMove, { passive: true });
     slider.addEventListener('touchend', handlePromoTouchEnd, { passive: true });
     
-    // Оптимизация для тач-устройств
+
     slider.style.touchAction = 'pan-y';
 
-    // Navigation buttons
+  
     prevBtn.addEventListener('click', () => {
         stopAutoPromotionSlide();
         goToPromotionSlide(currentPromotionSlide - 1);
@@ -287,10 +286,10 @@ function initPromotionsSlider() {
         startAutoPromotionSlide();
     });
 
-    // Auto slide (только на десктопе)
+   
     startAutoPromotionSlide();
 
-    // Pause on hover (только на десктопе)
+  
     if (window.innerWidth > 768) {
         slider.addEventListener('mouseenter', stopAutoPromotionSlide);
         slider.addEventListener('mouseleave', startAutoPromotionSlide);
@@ -310,12 +309,12 @@ function goToPromotionSlide(index) {
         currentPromotionSlide = index;
     }
 
-    // Update slider position
+   
     const slider = document.getElementById('promotionsSlider');
     const slideWidth = slides[0].offsetWidth + 30; // width + gap
     slider.style.transform = `translateX(-${currentPromotionSlide * slideWidth}px)`;
 
-    // Update indicators
+
     indicators.forEach((indicator, i) => {
         indicator.classList.toggle('active', i === currentPromotionSlide);
     });
@@ -337,7 +336,7 @@ function stopAutoPromotionSlide() {
     }
 }
 
-// Обновляем функцию инициализации в DOMContentLoaded
+
 document.addEventListener('DOMContentLoaded', function() {
     initServicesSlider();
     initPromotionsSlider();

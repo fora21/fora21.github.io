@@ -1,4 +1,4 @@
-// Упрощенная галерея и лайтбокс
+// Упрощенная галерея
 class ApartmentGallery {
     constructor() {
         this.currentImageIndex = 0;
@@ -21,21 +21,21 @@ class ApartmentGallery {
     setupGallery() {
         const morePhotos = document.querySelector('.more-photos');
 
-        // Собираем все изображения для лайтбокса
+       
         this.collectAllImages();
 
-        // ТОЛЬКО блок +X фото открывает лайтбокс
+       
         if (morePhotos) {
             morePhotos.addEventListener('click', () => {
                 this.openLightbox(0);
             });
         }
 
-        // Основное изображение НЕ открывает лайтбокс
+        // Основное изображение
         const mainImage = document.querySelector('.main-image');
         mainImage.style.cursor = 'default';
         
-        // Статичные миниатюры НЕ кликабельны
+        // Статичные миниатюры 
         const staticThumbs = document.querySelectorAll('.static-thumb');
         staticThumbs.forEach(thumb => {
             thumb.style.cursor = 'default';
@@ -50,10 +50,10 @@ class ApartmentGallery {
         const staticThumbs = document.querySelectorAll('.static-thumb img');
         const thumbImages = Array.from(staticThumbs).map(thumb => thumb.src);
         
-        // Объединяем видимые изображения
+       
         this.allImages = [mainImage, ...thumbImages];
         
-        // Добавляем дополнительные фото
+      
         const apartmentType = this.getApartmentType();
         this.addAdditionalImages(apartmentType);
     }

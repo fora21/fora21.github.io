@@ -36,7 +36,7 @@ function initGallery() {
 }
 
 function openLightbox(imageSrc) {
-    // Создаем оверлей лайтбокса
+    // Оверлей лайтбокса
     const lightbox = document.createElement('div');
     lightbox.className = 'lightbox';
     lightbox.style.cssText = `
@@ -53,7 +53,7 @@ function openLightbox(imageSrc) {
         cursor: pointer;
     `;
     
-    // Создаем элемент изображения
+    // Элемент изображения
     const img = document.createElement('img');
     img.src = `images/${imageSrc}`;
     img.alt = "Фото базы отдыха ЭХО";

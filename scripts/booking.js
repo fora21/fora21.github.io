@@ -1,6 +1,6 @@
 // booking.js - полная версия для всех апартаментов
 document.addEventListener('DOMContentLoaded', function() {
-    // Данные апартаментов (полный список)
+    // Данные апартаментов 
     const apartmentsData = {
         'shale': {
             name: 'Шале',
@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return new Intl.NumberFormat('ru-RU').format(price) + ' ₽';
     }
 
-    // Валидация и отправка формы (полная версия)
+    // Валидация и отправка формы 
     function validateField(field) {
         const errorElement = document.getElementById(field.id + 'Error');
         if (!errorElement) return true;

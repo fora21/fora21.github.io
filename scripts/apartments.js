@@ -15,19 +15,19 @@
 // - "swiss_apartment" (Швейцарские апартаменты)
 // - "merchant_apartment" (Купеческие апартаменты)
 // - "hostel" (Хостел) - НЕ БЛОКИРУЕТСЯ (всегда доступен)
-// - "tent_places" (Палаточные места)
+// - "tent_places" (Палаточные места) - еще будет на сайте
 // - "forest_house" (Лесной домик)
 
 // === СИСТЕМА УПРАВЛЕНИЯ БРОНИРОВАНИЯМИ ===
 const bookedDates = {
-    "shale": [{ start: "2025-11-29", end: "2025-12-01" }],
+    "shale": [{ start: "", end: "" }],
     "hotel_standard": [],
-    "beach_house": [],
-    "swiss_apartment": [],
-    "merchant_apartment": [],
+    "beach_house": [{ start: "", end: "" }],
+    "swiss_apartment": [{ start: "", end: "" }],
+    "merchant_apartment": [{ start: "", end: "" }],
     "hostel": [],
     "tent_places": [],
-    "forest_house": []
+    "forest_house": [{ start: "", end: "" }]
 };
 
 // Данные апартаментов 
@@ -111,7 +111,7 @@ const apartmentsData = [
     }
 ];
 
-// Глобальные переменные
+
 let currentGuests = { adults: 0, children03: 0, children416: 0 };
 const MAX_GUESTS = 20;
 
@@ -205,7 +205,7 @@ function isGuestCountValid(apartment, totalGuests) {
     return totalGuests <= maxBeds;
 }
 
-// Рендеринг
+
 function renderApartments() {
     const container = document.getElementById('apartmentsContainer');
     const checkIn = document.getElementById('check-in').value;
@@ -326,7 +326,7 @@ document.addEventListener('click', function(e) {
         alert(`Нельзя забронировать более ${MAX_GUESTS} человек в одной заявке.`);
         return;
     }
-    // Для обычных апартаментов проверяем вместимость
+    // Для обычных апартаментов
     if (apt.id !== 'hostel' && apt.id !== 'hotel_standard') {
         let maxBeds = getMaxBeds(apt);
         if (totalGuests > maxBeds) {
